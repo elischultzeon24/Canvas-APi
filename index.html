@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/simple.css" />
+    <link rel="stylesheet" href="/assets/hljs-default.css" />
+    <title>Canvas API</title>
+    <script src="script.js" defer></script>
+    <link rel="shortcut icon" href="favicon.ico" />
+
+  </head>
+  <body>
+    <header><h2>Kurzanleitung für Canvas API</h2></header>
+    <main>
+      <h3>Wozu braucht es diese WEB-API</h3>
+      <p>
+        <mark> Canvas-API </mark>bietet eine Möglichkeit, Grafiken mithilfe von JavaScript und dem HTML Canvas-Element zu zeichnen. Sie kann unter anderem für Animationen, Spielgrafiken, Datenvisualisierung, Fotobearbeitung und Echtzeit-Videobearbeitung verwendet werden.
+
+          Die <mark> Canvas-API </mark> konzentriert sich hauptsächlich auf 2D-Grafiken. Die WebGL-API, die ebenfalls das Canva-Element nutzt, ermöglicht das Zeichnen von hardwarebeschleunigten 2D- und 3D-Grafiken.
+      </p>
+      <h3>Codebeispiele</h3>
+      <a href="code.html"><button>Ein Beispielskript ausführen</button></a>
+      <pre><code>
+        &lt;canvas id="meinCanvas" width="500" height="400" style="border:1px solid #000;"&gt;&lt;/canvas&gt;
+        &lt;script&gt;
+            const canvas = document.getElementById("meinCanvas");
+            const ctx = canvas.getContext("2d");
+        
+            // Rechteck zeichnen
+            ctx.fillStyle = "blue";
+            ctx.fillRect(50, 50, 150, 100);
+        
+            // Kreis zeichnen
+            ctx.beginPath();
+            ctx.arc(300, 150, 50, 0, Math.PI * 2);
+            ctx.fillStyle = "red";
+            ctx.fill();
+            ctx.closePath();
+        
+            // Linie zeichnen
+            ctx.beginPath();
+            ctx.moveTo(50, 300);
+            ctx.lineTo(400, 300);
+            ctx.strokeStyle = "green";
+            ctx.lineWidth = 5;
+            ctx.stroke();
+            ctx.closePath();
+        &lt;/script&gt;
+            </code></pre>
+      <h3>Weiterführende Links:</h3>
+      <ul>
+        <li>
+          <a href="ende.html">Ende</a>
+          <br>
+          Mdn: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</a>
+        </li>
+      </ul>
+    </main>
+    <footer>Finn Gorell, Elias Schultze - ON24</footer>
+    <!--Neccesary for code highlighting below - just dont touch it-->
+    <script src="/assets/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

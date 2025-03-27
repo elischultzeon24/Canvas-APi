@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas API Beispiel</title>
+    <link rel="stylesheet" href="/assets/simple.css" />
+    <link rel="stylesheet" href="/assets/hljs-default.css" />
+  
+    <script src="https://cdn.jsdelivr.net/npm/konva@9.3.20/konva.min.js"></script>
+
+</head>
+<body>
+    <canvas id="meinCanvas" width="500" height="400" style="border:1px solid #000;"></canvas>
+    <script>
+        const canvas = document.getElementById("meinCanvas");
+        const ctx = canvas.getContext("2d");
+
+      
+        ctx.fillStyle = "lightblue";
+        ctx.fillRect(50, 50, 150, 100);
+
+        
+        ctx.beginPath();
+        ctx.arc(85, 90, 30, 0, Math.PI * 2);
+        ctx.fillStyle = "black";
+        ctx.fill();
+        ctx.closePath();
+
+        
+        ctx.fillStyle = "lightblue";
+        ctx.fillRect(250, 50, 150, 100)
+
+    
+        ctx.beginPath();
+        ctx.arc(365, 110, 30, 0, Math.PI * 2);
+        ctx.fillStyle = "black";
+        ctx.fill();
+        ctx.closePath();
+
+
+     
+        ctx.beginPath();
+        ctx.arc(225, 230, 50, 0, Math.PI * 2);
+        ctx.fillStyle = "red";
+        ctx.fill();
+        ctx.closePath();
+
+
+        ctx.beginPath();
+        ctx.moveTo(50, 300);
+        ctx.lineTo(400, 300);
+        ctx.strokeStyle = "green";
+        ctx.lineWidth = 5;
+        ctx.stroke();
+        ctx.closePath();
+
+       
+        ctx.beginPath();
+        ctx.ellipse(225, 300, 173, 50, 0, 0,Math.PI); 
+        ctx.stroke();
+        ctx.closePath();
+    </script>
+<br>
+<a href="index.html"><button>Startseite</button></a>
+<a href="code.html"><button>Zurück zu Basic</button></a>
+
+
+    
+
+</body>
+</html>

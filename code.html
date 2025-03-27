@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas API Beispiel</title>
+    <link rel="stylesheet" href="/assets/simple.css" />
+    <link rel="stylesheet" href="/assets/hljs-default.css" />
+</head>
+<body>
+    <canvas id="meinCanvas" width="500" height="400" style="border:1px solid #000;"></canvas>
+    <script>
+        const canvas = document.getElementById("meinCanvas");
+        const ctx = canvas.getContext("2d");
+
+        // Rechteck zeichnen
+        ctx.fillStyle = "blue";
+        ctx.fillRect(50, 50, 150, 100);
+
+        // Kreis zeichnen
+        ctx.beginPath();
+        ctx.arc(300, 150, 50, 0, Math.PI * 2);
+        ctx.fillStyle = "red";
+        ctx.fill();
+        ctx.closePath();
+
+        // Linie zeichnen
+        ctx.beginPath();
+        ctx.moveTo(50, 300);
+        ctx.lineTo(400, 300);
+        ctx.strokeStyle = "green";
+        ctx.lineWidth = 5;
+        ctx.stroke();
+        ctx.closePath();
+    </script>
+
+    <br>
+        <a href="index.html"><button>Startseite</button></a>
+        <a href="code2.html" id="premiumButton"><button>Premium 24,99 €</button></a>
+
+        <script>
+
+            let button = document.getElementById("premiumButton");
+
+            const nachricht = [
+            "Kannst du dir das wirklich leisten?",
+            "Bist du sicher, dass du fortfahren möchtest?",
+            "Hast du alle Konsequenzen bedacht?",
+            "Dies könnte irreversible Auswirkungen haben.",
+            "Bitte überlege dir das gut.",
+            "Deine Entscheidung ist endgültig.",
+            "Es gibt kein Zurück mehr.",
+            "Handle weise und bewusst."
+            ];
+
+            button.addEventListener('click', function() {
+            nachricht.forEach(text => {
+            alert(text);
+    });
+});
+        
+        </script>
+</body>
+</html>
